@@ -77,7 +77,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Ingwer Ludwig - [@your_twitter](https://twitter.com/your_username)
+Ingwer Ludwig - ingwerflash@gmail.com
 
 Project Link: <a href="https://github.com/ingwerludwig/binar-reservasi-bioskop.git">Click here</a>
 
