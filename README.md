@@ -114,8 +114,6 @@ Project Link Testing: <a href="https://binar-reservasi-bioskop-production.up.rai
 [Springboot-url]: https://spring.io/projects/spring-boot
 [Java.com]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
 [Java-url]: https://www.java.com/en/
-[Railway.com]: 
-[Railway-url]: [railway.app]][Railway-url]](https://railway.app
 
 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
