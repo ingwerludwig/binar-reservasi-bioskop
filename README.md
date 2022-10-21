@@ -8,9 +8,8 @@ Reservasi Bioskop API is part of learning process in BackEnd Java Independent St
 
 ### Built With
 
-* [![Java][java.com]][java-url]
-* [![SpringBoot][spring.io/projects/spring-boot]][SpringBoot-url]
-* [![Railway][railway.app/]][Railway-url]
+* [![Java][Java.com]][Java-url]
+* [![SpringBoot][Springboot.com]][Springboot-url]
 * [![Postgres][Postgre.com]][Postgre-url]
 
 
@@ -109,6 +108,16 @@ Project Link Testing: <a href="https://binar-reservasi-bioskop-production.up.rai
 [Svelte-url]: https://svelte.dev/
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [Laravel-url]: https://laravel.com
+
+
+[Springboot.com]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
+[Springboot-url]: https://spring.io/projects/spring-boot
+[Java.com]: https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white
+[Java-url]: https://www.java.com/en/
+[Railway.com]: 
+[Railway-url]: [railway.app]][Railway-url]](https://railway.app
+
+
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
