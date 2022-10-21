@@ -79,7 +79,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Ingwer Ludwig - ingwerflash@gmail.com
 
-Project Link Testing: <a href="https://github.com/ingwerludwig/binar-reservasi-bioskop.git](https://binar-reservasi-bioskop-production.up.railway.app">Click here</a>
+Project Link Testing: <a href="https://binar-reservasi-bioskop-production.up.railway.app">Click here</a>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
