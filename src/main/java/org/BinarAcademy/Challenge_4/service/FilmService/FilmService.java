@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class FilmService{
 
-    Logger logger = (Logger) LoggerFactory.getLogger(FilmService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(FilmService.class);
 
     @Autowired
     private final FilmRepository repository;
@@ -33,7 +33,7 @@ public class FilmService{
             repository.save(film);
         }
         catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
     }
 
@@ -48,7 +48,7 @@ public class FilmService{
             repository.deleteAll(existFilm);
         }
         catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
 
     }
@@ -68,7 +68,7 @@ public class FilmService{
                 existFilm.setPlaying(changeBool);
             }
         }catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
     }
 }

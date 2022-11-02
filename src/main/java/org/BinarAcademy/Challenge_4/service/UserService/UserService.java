@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class UserService {
 
-    Logger logger = (Logger) LoggerFactory.getLogger(FilmService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
     @Autowired
     private final UserRepository repository;
     @Autowired
@@ -31,7 +31,7 @@ public class UserService {
         try{
             repository.save(newUser);
         }catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
     }
 
@@ -40,7 +40,7 @@ public class UserService {
         try{
             repository.delete(existUser);
         }catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
     }
 

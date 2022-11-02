@@ -15,12 +15,13 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class ScheduleService {
-    Logger logger = (Logger) LoggerFactory.getLogger(ScheduleService.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ScheduleService.class);
+
     @Autowired
     private final ScheduleRepository scheduleRepository;
     private final FilmRepository filmRepository;
@@ -83,7 +84,7 @@ public class ScheduleService {
             scheduleRepository.delete(existSchedule);
         }
         catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
 
     }
@@ -101,7 +102,7 @@ public class ScheduleService {
             }
         }
         catch(Exception e){
-            logger.log(Level.SEVERE, "an exception was thrown");
+            LOG.error(String.valueOf(e));
         }
     }
 }
