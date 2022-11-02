@@ -66,11 +66,11 @@ public class DatabaseSeeder {
                 );
                 schRepository.save(schedule);
 
-//                // Generate Order Dummy Data
-//                List<Schedule> allSchedule  = scheduleService.
+                // Generate Order Dummy Data
+//                List<Schedule> allSchedule  = scheduleService.getAllSchedule();
 //                List<User> allUser = userService.getAllUser();
-//                User[] targetArrayUser = allUser.stream().toArray(User[]::new);
-//                Order order = new Order()
+
+
             }
         };
     }
