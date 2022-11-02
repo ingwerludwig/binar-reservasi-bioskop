@@ -2,13 +2,19 @@ package org.BinarAcademy.Challenge_4.service.UserService;
 
 import org.BinarAcademy.Challenge_4.model.users.User;
 import org.BinarAcademy.Challenge_4.repository.user.UserRepository;
+import org.BinarAcademy.Challenge_4.service.FilmService.FilmService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Service
 public class UserService {
+
+    Logger logger = (Logger) LoggerFactory.getLogger(FilmService.class);
     @Autowired
     private final UserRepository repository;
     @Autowired
@@ -21,12 +27,21 @@ public class UserService {
         if(existUser != null) {
             throw new IllegalStateException("User nama has been taken ");
         }
-        repository.save(newUser);
+
+        try{
+            repository.save(newUser);
+        }catch(Exception e){
+            logger.log(Level.SEVERE, "an exception was thrown");
+        }
     }
 
     public void deleteUser(String nama) {
         User existUser = repository.findUserByNama(nama);
-        repository.delete(existUser);
+        try{
+            repository.delete(existUser);
+        }catch(Exception e){
+            logger.log(Level.SEVERE, "an exception was thrown");
+        }
     }
 
     public List<User> getAllUser() {

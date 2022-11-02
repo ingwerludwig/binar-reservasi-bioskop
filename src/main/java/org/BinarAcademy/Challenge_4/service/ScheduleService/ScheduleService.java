@@ -4,6 +4,8 @@ import org.BinarAcademy.Challenge_4.model.film.Film;
 import org.BinarAcademy.Challenge_4.model.schedule.Schedule;
 import org.BinarAcademy.Challenge_4.repository.film.FilmRepository;
 import org.BinarAcademy.Challenge_4.repository.schedule.ScheduleRepository;
+import org.BinarAcademy.Challenge_4.service.FilmService.FilmService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,10 +15,12 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Service
 public class ScheduleService {
-
+    Logger logger = (Logger) LoggerFactory.getLogger(ScheduleService.class);
     @Autowired
     private final ScheduleRepository scheduleRepository;
     private final FilmRepository filmRepository;
@@ -74,7 +78,14 @@ public class ScheduleService {
 
     public void deleteSchedule(Integer film_code, LocalDate tanggal_tayang){
         Schedule existSchedule = scheduleRepository.findScheduleByFilmCodeAndTanggaltayang(film_code,tanggal_tayang);
-        scheduleRepository.delete(existSchedule);
+
+        try{
+            scheduleRepository.delete(existSchedule);
+        }
+        catch(Exception e){
+            logger.log(Level.SEVERE, "an exception was thrown");
+        }
+
     }
 
     @Transactional
@@ -82,14 +93,15 @@ public class ScheduleService {
         Schedule existSchedule = scheduleRepository.findScheduleByFilmCodeAndTanggaltayang(film_code,tanggal_tayang);
         boolean changeBool;
 
-        if(existSchedule == null){
-            throw new IllegalStateException("Your requested film with tanggal_tayang is not exist");
+        try{
+            if(film_code != null && tanggal_tayang != null){
+                existSchedule.setTanggal_tayang(tanggal_tayang);
+            }else{
+                throw new IllegalStateException("Somethings wrong with input");
+            }
         }
-
-        if(film_code != null && tanggal_tayang != null){
-            existSchedule.setTanggal_tayang(tanggal_tayang);
-        }else{
-            throw new IllegalStateException("Somethings wrong with input");
+        catch(Exception e){
+            logger.log(Level.SEVERE, "an exception was thrown");
         }
     }
 }

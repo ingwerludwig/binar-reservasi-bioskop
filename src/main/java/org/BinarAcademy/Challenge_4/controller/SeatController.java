@@ -17,35 +17,3 @@
 //    private
 //}
 //
-//
-//@RestController
-//@RequestMapping(path = "/api/v1/film")
-//public class FilmController {
-//    @Autowired
-//    private FilmService filmService;
-//
-//    @GetMapping()
-//    public List<Film> getAllFilm(){
-//        return filmService.getAllFilm();
-//    }
-//
-//    @PostMapping
-//    public void addNewFilm(@RequestBody Film newFilm){
-//        filmService.addNewFilm(newFilm);
-//    }
-//
-//    @DeleteMapping(path = "{nama}")
-//    public void deleteFilm(@PathVariable("nama") String nama){
-//        filmService.deleteFilm(nama);
-//    }
-//
-//    @PutMapping(path = "{code}")
-//    public void updateFilm(
-//            @PathVariable("code") Integer code,
-//            @Param("nama") String nama,
-//            @Param("isPlaying") int isPlaying
-//    ){
-//        filmService.updateFilm(code, nama, isPlaying);
-//    }
-//
-//}
