@@ -44,8 +44,11 @@ public class Order {
     private Schedule schedule;
 
 
-    public Order(int id, String metode_pembayaran, LocalDate tanggal_order, String catatan, Schedule schedule, User user) {
-        this.id = id;
+    public Order(String metode_pembayaran,
+                 LocalDate tanggal_order,
+                 String catatan,
+                 Schedule schedule,
+                 User user) {
         this.metode_pembayaran = metode_pembayaran;
         this.tanggal_order = tanggal_order;
         this.catatan = catatan;
