@@ -1,16 +1,14 @@
 package org.BinarAcademy.Challenge_4.model.order;
 
 import lombok.NoArgsConstructor;
-import org.BinarAcademy.Challenge_4.model.film.Film;
 import org.BinarAcademy.Challenge_4.model.schedule.Schedule;
-import org.BinarAcademy.Challenge_4.model.users.User;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @NoArgsConstructor
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
 
     @Id
@@ -36,24 +34,19 @@ public class Order {
     @Column(name = "catatan")
     private String catatan;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
-    private User user;
+
     @ManyToOne(optional = false)
     @JoinColumn(name = "schedule_id", referencedColumnName = "id", nullable = false)
     private Schedule schedule;
 
-
     public Order(String metode_pembayaran,
                  LocalDate tanggal_order,
                  String catatan,
-                 Schedule schedule,
-                 User user) {
+                 Schedule schedule) {
         this.metode_pembayaran = metode_pembayaran;
         this.tanggal_order = tanggal_order;
         this.catatan = catatan;
         this.schedule = schedule;
-        this.user = user;
     }
 
     public int getId() {
@@ -96,11 +89,4 @@ public class Order {
         this.schedule = schedule;
     }
 
-    public User getUser(){
-        return this.user;
-    }
-
-    public void setUser(User user){
-        this.user = user;
-    }
 }

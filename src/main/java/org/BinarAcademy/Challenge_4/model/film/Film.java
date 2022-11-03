@@ -2,6 +2,7 @@ package org.BinarAcademy.Challenge_4.model.film;
 
 import javax.persistence.*;
 import lombok.NoArgsConstructor;
+import org.BinarAcademy.Challenge_4.model.order.Order;
 import org.BinarAcademy.Challenge_4.model.schedule.Schedule;
 
 import java.util.HashSet;
@@ -9,7 +10,7 @@ import java.util.Set;
 
 @NoArgsConstructor
 @Entity
-@Table(name = "film")
+@Table(name = "films")
 public class Film {
     @Id
     @SequenceGenerator(
@@ -31,7 +32,11 @@ public class Film {
     @Column(name = "is_playing")
     private Boolean isPlaying;
 
-    @OneToMany(mappedBy = "film", targetEntity = Schedule.class)
+    public Film(Set<Schedule> schedule) {
+        this.schedule = schedule;
+    }
+
+    @OneToMany(mappedBy = "film")
     private Set<Schedule> schedule = new HashSet<>();
 
     public Film(String nama, Boolean isPlaying){

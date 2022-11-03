@@ -53,9 +53,6 @@ public class User {
         this.email = email;
     }
 
-    @OneToMany(mappedBy = "user", targetEntity = Order.class)
-    private Set<Order> Order = new HashSet<>();
-
     public Integer getId() {
         return id;
     }

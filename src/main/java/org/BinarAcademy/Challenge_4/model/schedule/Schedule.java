@@ -1,8 +1,13 @@
 package org.BinarAcademy.Challenge_4.model.schedule;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.NoArgsConstructor;
 import org.BinarAcademy.Challenge_4.model.film.Film;
 import org.BinarAcademy.Challenge_4.model.order.Order;
+import org.BinarAcademy.Challenge_4.model.seats.Seat;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
@@ -12,7 +17,7 @@ import java.util.Set;
 
 @NoArgsConstructor
 @Entity
-@Table(name = "schedule")
+@Table(name = "schedules")
 public class Schedule {
 
     @Id
@@ -41,12 +46,19 @@ public class Schedule {
     @Column(name = "harga_tiket")
     private Double harga_tiket;
 
-    @OneToMany(mappedBy = "schedule",targetEntity=Order.class)
-    private Set<Order> order = new HashSet<>();
+//    @OneToMany(mappedBy = "schedule",targetEntity=Order.class)
+//    private Set<Order> order = new HashSet<>();
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "film_code", referencedColumnName = "code", nullable = false)
     private Film film;
+
+    @OneToMany(mappedBy = "schedule")
+    private Set<Order> order = new HashSet<>();
+
+
+    @OneToMany(mappedBy = "schedule")
+    private Set<Seat> seat = new HashSet<>();
 
     public Schedule(
             LocalDate tanggal_tayang,
