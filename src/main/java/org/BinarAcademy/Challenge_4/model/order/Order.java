@@ -36,10 +36,10 @@ public class Order {
     @Column(name = "catatan")
     private String catatan;
 
-    @ManyToOne(optional = true,targetEntity = User.class, cascade = CascadeType.ALL)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private User user;
-    @ManyToOne(optional = false,targetEntity = Schedule.class, cascade = CascadeType.ALL)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "schedule_id", referencedColumnName = "id", nullable = false)
     private Schedule schedule;
 
