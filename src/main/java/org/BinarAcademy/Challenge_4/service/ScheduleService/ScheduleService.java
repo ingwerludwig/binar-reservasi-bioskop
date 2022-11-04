@@ -24,6 +24,8 @@ public class ScheduleService {
 
     @Autowired
     private final ScheduleRepository scheduleRepository;
+
+    @Autowired
     private final FilmRepository filmRepository;
 
     @Autowired

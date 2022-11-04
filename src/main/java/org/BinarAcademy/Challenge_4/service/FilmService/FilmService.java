@@ -1,6 +1,7 @@
 package org.BinarAcademy.Challenge_4.service.FilmService;
 
 import org.BinarAcademy.Challenge_4.model.film.Film;
+import org.BinarAcademy.Challenge_4.model.users.User;
 import org.BinarAcademy.Challenge_4.repository.film.FilmRepository;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,6 @@ public class FilmService{
 
     public void addNewFilm(Film film){
         List<Film> filmOption = repository.findFilmByNama(film.getNama());
-//        if(filmOption.size() > 0){
-//            logger.log(Level.SEVERE, "an exception was thrown", new IllegalStateException("Film nama has been taken "));
-//        }
         try{
             repository.save(film);
         }
@@ -38,9 +36,10 @@ public class FilmService{
     }
 
     public List<Film> getAllFilm(){
-
         return repository.findAll().stream().toList();
     }
+
+
 
     public void deleteFilm(String nama){
         List<Film> existFilm = repository.findFilmByNama(nama);
