@@ -1,16 +1,12 @@
 package org.BinarAcademy.Challenge_4.model.schedule;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.NoArgsConstructor;
 import org.BinarAcademy.Challenge_4.model.film.Film;
 import org.BinarAcademy.Challenge_4.model.order.Order;
-import org.BinarAcademy.Challenge_4.model.seats.Seat;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
-
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
 import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,7 +15,6 @@ import java.util.Set;
 @Entity
 @Table(name = "schedules")
 public class Schedule {
-
     @Id
     @SequenceGenerator(
             name = "schedule_sequence",
@@ -46,19 +41,14 @@ public class Schedule {
     @Column(name = "harga_tiket")
     private Double harga_tiket;
 
-//    @OneToMany(mappedBy = "schedule",targetEntity=Order.class)
-//    private Set<Order> order = new HashSet<>();
-
     @ManyToOne(optional = false)
     @JoinColumn(name = "film_code", referencedColumnName = "code", nullable = false)
+    @JsonBackReference
     private Film film;
 
     @OneToMany(mappedBy = "schedule")
+    @JsonManagedReference
     private Set<Order> order = new HashSet<>();
-
-
-    @OneToMany(mappedBy = "schedule")
-    private Set<Seat> seat = new HashSet<>();
 
     public Schedule(
             LocalDate tanggal_tayang,
@@ -113,5 +103,13 @@ public class Schedule {
     }
     public void setFilm(Film film) {
         this.film = film;
+    }
+
+
+    public Set<Order> getOrder() {
+        return order;
+    }
+    public void setOrder(Set<Order> order) {
+        this.order = order;
     }
 }

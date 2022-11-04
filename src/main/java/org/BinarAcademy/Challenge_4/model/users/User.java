@@ -1,11 +1,7 @@
 package org.BinarAcademy.Challenge_4.model.users;
 
 import lombok.NoArgsConstructor;
-import org.BinarAcademy.Challenge_4.model.order.Order;
-
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
 
 @NoArgsConstructor
 @Entity
