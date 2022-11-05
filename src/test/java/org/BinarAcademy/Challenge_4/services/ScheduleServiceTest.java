@@ -13,8 +13,6 @@ import org.BinarAcademy.Challenge_4.repository.schedule.ScheduleRepository;
 import org.BinarAcademy.Challenge_4.service.FilmService.FilmService;
 import org.BinarAcademy.Challenge_4.service.ScheduleService.ScheduleService;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -35,7 +33,6 @@ import java.util.List;
 import java.util.Locale;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
