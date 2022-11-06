@@ -1,5 +1,6 @@
 package org.BinarAcademy.Challenge_4.service.OrderService;
 
+import com.google.firebase.messaging.FirebaseMessagingException;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperReport;
@@ -10,6 +11,7 @@ import org.BinarAcademy.Challenge_4.model.order.Order;
 import org.BinarAcademy.Challenge_4.model.seats.Seat;
 import org.BinarAcademy.Challenge_4.repository.order.OrderRepository;
 import org.BinarAcademy.Challenge_4.repository.seat.SeatRepository;
+import org.BinarAcademy.Challenge_4.service.Firebase.FirebaseMessagingService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,8 @@ import java.util.Map;
 
 @Service
 public class OrderService {
+    @Autowired
+    private FirebaseMessagingService firebaseService;
 
     private static final Logger LOG = LoggerFactory.getLogger(OrderService.class);
     @Autowired
@@ -42,7 +46,7 @@ public class OrderService {
 
     public final String invoice_order_path = "jasper/invoice_order.jrxml";
 
-    public void addNewOrder(Order newOrder) throws IOException {
+    public void addNewOrder(Order newOrder) throws IOException, FirebaseMessagingException {
         Seat existSeat = seatRepository.findSeatById(newOrder.getSeat().getNo_kursi());
 
         if(existSeat == null){
@@ -54,6 +58,7 @@ public class OrderService {
             else {
                 existSeat.setBooked(Boolean.TRUE);
                 this.generateInvoiceFor(newOrder);
+                firebaseService.sendNotification(" Binar-Cinema", "Your order has been created!", "Receiver device token");
                 repository.save(newOrder);
             }
         }

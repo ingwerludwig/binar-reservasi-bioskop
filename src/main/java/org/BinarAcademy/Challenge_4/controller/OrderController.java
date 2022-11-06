@@ -1,5 +1,6 @@
 package org.BinarAcademy.Challenge_4.controller;
 
+import com.google.firebase.messaging.FirebaseMessagingException;
 import org.BinarAcademy.Challenge_4.model.order.Order;
 import org.BinarAcademy.Challenge_4.model.seats.Seat;
 import org.BinarAcademy.Challenge_4.service.OrderService.OrderService;
@@ -23,7 +24,7 @@ public class OrderController {
     }
 
     @PostMapping
-    public void addNewOrder(@RequestBody Order newOrder) throws IOException {
+    public void addNewOrder(@RequestBody Order newOrder) throws IOException, FirebaseMessagingException {
         orderService.addNewOrder(newOrder);
     }
 //test
