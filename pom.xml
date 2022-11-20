@@ -6,7 +6,7 @@
     <modules>
         <module>discoveryserver</module>
 		<module>configserver</module>
-		<module>profilemanagement</module>
+		<module>microservices</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
