@@ -50,3 +50,74 @@
 2022-11-20 19:58:12.383  INFO 59060 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
 2022-11-20 19:58:12.383  INFO 59060 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
 2022-11-20 19:58:12.433  INFO 59060 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-11-20 20:02:42.193  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:07:42.205  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:12:42.215  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:17:42.234  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:22:42.259  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:27:42.273  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:32:42.281  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:37:42.300  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:42:42.306  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:47:42.315  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:52:42.333  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 20:57:42.347  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 21:02:42.363  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 21:07:42.413  INFO 59060 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 21:10:30.848  INFO 59060 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USER-SERVICE with eureka with status DOWN
+2022-11-20 21:10:30.857  INFO 59060 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1668953430857, current=DOWN, previous=UP]
+2022-11-20 21:10:30.880  INFO 59060 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/user-service:4acef5fd-34df-4b12-8583-61e80445381a: registering service...
+2022-11-20 21:10:31.063  INFO 59060 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/user-service:4acef5fd-34df-4b12-8583-61e80445381a - registration status: 204
+2022-11-20 21:10:31.248  INFO 59060 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-20 21:10:31.291  INFO 59060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-11-20 21:10:31.329  INFO 59060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-11-20 21:10:31.332  INFO 59060 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-11-20 21:10:34.343  INFO 59060 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-11-20 21:10:34.425  INFO 59060 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/user-service:4acef5fd-34df-4b12-8583-61e80445381a - deregister  status: 200
+2022-11-20 21:10:34.430  INFO 59060 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-11-20 21:10:45.859  INFO 65437 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-11-20 21:10:46.392  INFO 65437 --- [main] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=user-service, profiles=[default], label=null, version=null, state=null
+2022-11-20 21:10:46.393  INFO 65437 --- [main] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-file:/Users/ingwerludwig/DATA/College/INDEPENDENT STUDIES/microservice/configserver/user-service.properties'}]
+2022-11-20 21:10:46.402  INFO 65437 --- [main] o.B.m.UserServiceApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-11-20 21:10:46.411  INFO 65437 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8761
+2022-11-20 21:10:46.411  WARN 65437 --- [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@44f9779c uris = array<String>['http://localhost:8761'], optional = true, profiles = list['default']]): None of labels [] found
+2022-11-20 21:10:46.736  INFO 65437 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-20 21:10:46.744  INFO 65437 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2022-11-20 21:10:46.914  INFO 65437 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=27957c4f-da29-381c-99df-95d10493450f
+2022-11-20 21:10:47.448  INFO 65437 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8762 (http)
+2022-11-20 21:10:47.455  INFO 65437 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-20 21:10:47.456  INFO 65437 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-20 21:10:47.549  INFO 65437 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-11-20 21:10:47.549  INFO 65437 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1137 ms
+2022-11-20 21:10:47.718  INFO 65437 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-20 21:10:47.758  INFO 65437 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-20 21:10:47.885  INFO 65437 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-20 21:10:48.020  INFO 65437 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-11-20 21:10:48.188  INFO 65437 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-11-20 21:10:48.199  INFO 65437 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2022-11-20 21:10:48.461  INFO 65437 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-20 21:10:48.467  INFO 65437 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-20 21:10:48.496  WARN 65437 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-20 21:10:49.077  INFO 65437 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-11-20 21:10:49.233  WARN 65437 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-11-20 21:10:49.338  INFO 65437 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-11-20 21:10:49.429  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-11-20 21:10:49.441  INFO 65437 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-20 21:10:49.517  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-11-20 21:10:49.518  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-11-20 21:10:49.518  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-11-20 21:10:49.518  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-11-20 21:10:49.518  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-11-20 21:10:49.518  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-11-20 21:10:49.519  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-11-20 21:10:50.204  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-11-20 21:10:50.211  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-11-20 21:10:50.218  INFO 65437 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-11-20 21:10:50.230  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1668953450225 with initial instances count: 1
+2022-11-20 21:10:50.239  INFO 65437 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USER-SERVICE with eureka with status UP
+2022-11-20 21:10:50.240  INFO 65437 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1668953450240, current=UP, previous=STARTING]
+2022-11-20 21:10:50.243  INFO 65437 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/user-service:5dec70fa-ef35-4994-8cea-c4d852141ec0: registering service...
+2022-11-20 21:10:50.269  INFO 65437 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8762 (http) with context path ''
+2022-11-20 21:10:50.270  INFO 65437 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8762
+2022-11-20 21:10:50.312  INFO 65437 --- [main] o.B.m.UserServiceApplication             : Started UserServiceApplication in 5.805 seconds (JVM running for 6.935)
+2022-11-20 21:10:50.324  INFO 65437 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USER-SERVICE/user-service:5dec70fa-ef35-4994-8cea-c4d852141ec0 - registration status: 204
